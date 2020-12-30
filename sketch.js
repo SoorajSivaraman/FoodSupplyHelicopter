@@ -13,6 +13,7 @@ function preload()
 
 function setup() {
 	createCanvas(800, 700);
+	
 	rectMode(CENTER);
 	
 
@@ -43,12 +44,16 @@ function setup() {
 function draw() 
 {
   rectMode(CENTER);
-  background(0);
+  background("black");
   packageSprite.x = packageBody.position.x; 
   packageSprite.y = packageBody.position.y;
   drawSprites();
+  fill(rgb(188, 219, 48));
+  textFont("Lucida Calligraphy");
+  textSize(15);
+  text("Pressing DOWN Arrow will drop the food packet from the helicopter.", 100, 50);
+  text("Pressing UP Arrow will create another food packet in the helicopter \nwhich can be dropped again by pressing the DOWN Arrow.", 100, 100);
 }
-
 function keyPressed() 
 {
  /* Pressing "DOWN" Arrow will drop the box from the helicopter.
